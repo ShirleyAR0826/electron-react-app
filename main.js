@@ -3,8 +3,6 @@ const path = require('path');
 
 const isDev = !app.isPackaged;
 
-const Nucleus = require("nucleus-nodejs");
-
 function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
@@ -19,11 +17,6 @@ function createWindow() {
   })
 
   win.loadFile('index.html');
-  
-  Nucleus.init('60598d488314981b6e2b1422');
-  Nucleus.setUserId('Shirley_Apellido')
-  // Required: Sends the first event to the server that app started
-  Nucleus.appStarted();
 }
 
 if (isDev) {
